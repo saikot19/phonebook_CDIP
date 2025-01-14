@@ -32,28 +32,30 @@ class _SplashPageState extends State<SplashPage> {
       home: Scaffold(
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const Spacer(), // Push content to the top
               // App Logo
               Container(
                 height: 200,
                 width: 200,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image:
-                        AssetImage('assets/images/ic_launcher-playstore.png'),
+                    image: AssetImage('assets/images/appstore.png'),
                   ),
                 ),
               ),
-              const SizedBox(height: 20), // Spacer between logo and version text
-
-              // Version Text
-              const Text(
-                "V.2.0.1",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey,
+              const SizedBox(height: 20), // Spacer between logo and text
+              const Spacer(), // Push content below the logo upwards
+              // Version Text at the Bottom
+              const Padding(
+                padding: EdgeInsets.only(bottom: 16.0),
+                child: Text(
+                  "V.2.0.1",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blueGrey,
+                  ),
                 ),
               ),
             ],

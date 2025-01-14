@@ -1,6 +1,7 @@
 //package
 import 'package:flutter/material.dart';
 
+
 //pages
 import 'package:phonebook/models/category.dart';
 import 'package:phonebook/models/employee.dart';
@@ -59,7 +60,7 @@ const availableEmployees = [
     staffPhone: '+1234567890',
     unitId: 1,
     staffImage: 'assets/images/saikot.png',
-    deptId: 'c1',
+    deptId: 'c6',
     departmentName: 'Digitization',
     projectId: 100,
     projectName: 'Emergency Response',
@@ -70,7 +71,7 @@ const availableEmployees = [
     branchName: 'Main Branch',
     areaName: 'Dhaka',
     zoneName: 'Zone A',
-    designationName: 'IT-Intern(Data)',
+    designationName: 'IT-Intern',
     createdBy: 1,
     createdAt: '2023-01-01T10:00:00Z',
     updatedAt: '2023-06-01T12:00:00Z',
@@ -84,7 +85,7 @@ const availableEmployees = [
     staffPhone: '+1234567891',
     unitId: 2,
     staffImage: 'assets/images/biswas.png',
-    deptId: 'c2',
+    deptId: 'c6',
     departmentName: 'Digitization',
     projectId: 101,
     projectName: 'Shishok',
