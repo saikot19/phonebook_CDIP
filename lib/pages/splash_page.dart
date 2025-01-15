@@ -28,7 +28,11 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "CDIP PhoneBook",
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: Colors.blueGrey[900], // Dark background
+      ),
       home: Scaffold(
         body: Center(
           child: Column(
@@ -54,7 +58,7 @@ class _SplashPageState extends State<SplashPage> {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    color: Colors.blueGrey,
+                    color: Colors.white, // Light text for dark background
                   ),
                 ),
               ),

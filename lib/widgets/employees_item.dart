@@ -1,0 +1,72 @@
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:phonebook/data/dummy_data.dart';
+import 'package:phonebook/models/employee.dart';
+import 'package:transparent_image/transparent_image.dart';
+
+class EmployeeItem extends StatelessWidget {
+  const EmployeeItem({
+    super.key,
+    required this.employee,
+  });
+
+  final Employee employee;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: const EdgeInsets.all(8),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+      ),
+      clipBehavior: Clip.hardEdge,
+      elevation: 2,
+      child: InkWell(
+        onTap: () {},
+        child: Stack(
+          children: [
+            // Ensure the image covers the entire box
+            FadeInImage(
+              placeholder: MemoryImage(kTransparentImage),
+              image: NetworkImage(employee.staffImage),
+              fit: BoxFit.cover, // Ensures the image covers the box
+              width: double.infinity, // Makes the image fill the Card width
+              height: 200, // Fixed height for the card
+            ),
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: Container(
+                color: Colors.black54,
+                padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 44),
+                child: Column(
+                  children: [
+                    Text(
+                      employee.departmentName,
+                      maxLines: 2,
+                      textAlign: TextAlign.center,
+                      softWrap: true,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    Row(
+                      children: [
+
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

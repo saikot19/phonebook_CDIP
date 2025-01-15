@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:phonebook/models/employee.dart';
+import 'package:phonebook/widgets/employees_item.dart';
 
 class EmployeesPage extends StatelessWidget {
   const EmployeesPage({
@@ -10,6 +11,7 @@ class EmployeesPage extends StatelessWidget {
 
   final String title;
   final List<Employee> employees;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -38,20 +40,8 @@ class EmployeesPage extends StatelessWidget {
     )
         : ListView.builder(
       itemCount: employees.length, // Specify the number of items
-      itemBuilder: (ctx, index) => Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
-        child: ListTile(
-          leading: CircleAvatar(
-            backgroundImage: AssetImage(employees[index].staffImage),
-          ),
-          title: Text(
-            employees[index].empNameEng,
-            style: Theme.of(context).textTheme.bodyLarge,
-          ),
-          subtitle: Text(employees[index].designationName),
-        ),
-      ),
-    );
+      itemBuilder: (ctx, index) =>EmployeeItem(employee: employees[index]),
+      );
 
     return Scaffold(
       appBar: AppBar(
