@@ -30,8 +30,8 @@ class _SplashPageState extends State<SplashPage> {
       title: "CDIP PhoneBook",
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        brightness: Brightness.dark,
-        scaffoldBackgroundColor: Colors.blueGrey[900], // Dark background
+        brightness: Brightness.light,
+        scaffoldBackgroundColor: Colors.white, // Standard white background
       ),
       home: Scaffold(
         body: Center(
@@ -58,7 +58,7 @@ class _SplashPageState extends State<SplashPage> {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white, // Light text for dark background
+                    color: Colors.black, // Black text for readability
                   ),
                 ),
               ),

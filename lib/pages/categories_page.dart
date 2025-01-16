@@ -29,11 +29,17 @@ class CategoriesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey[900], // Dark blue AppBar color
-        title: const Text('Department', style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.white, // Standard white AppBar color
+        title: const Text(
+          'Department',
+          style: TextStyle(
+            color: Colors.black, // Black text for white AppBar
+          ),
+        ),
+        elevation: 1, // Subtle shadow for standard design
       ),
       body: Container(
-        color: Colors.blueGrey[900], // Dark blue background color
+        color: Colors.white, // Standard white background color
         child: GridView(
           padding: const EdgeInsets.all(24),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

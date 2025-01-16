@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:phonebook/data/dummy_data.dart';
 import 'package:phonebook/models/employee.dart';
+import 'package:phonebook/widgets/employee_item_trait.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class EmployeeItem extends StatelessWidget {
@@ -43,7 +44,7 @@ class EmployeeItem extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      employee.departmentName,
+                      employee.empNameEng,
                       maxLines: 2,
                       textAlign: TextAlign.center,
                       softWrap: true,
@@ -57,7 +58,12 @@ class EmployeeItem extends StatelessWidget {
                     const SizedBox(height: 12),
                     Row(
                       children: [
+                        EmployeeItemTrait(
+                          icon:Icons.notifications_active,
+                          label: '${employee.createdAt}min',
 
+                        )
+              
                       ],
                     ),
                   ],
