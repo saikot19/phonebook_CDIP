@@ -40,30 +40,42 @@ class EmployeeItem extends StatelessWidget {
               right: 0,
               child: Container(
                 color: Colors.black54,
-                padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 44),
+                padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 16),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start, // Align text to the start
                   children: [
                     Text(
                       employee.empNameEng,
-                      maxLines: 2,
-                      textAlign: TextAlign.center,
+                      maxLines: 1,
+                      textAlign: TextAlign.start,
                       softWrap: true,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
-                        fontSize: 20,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      employee.branchName,
+                      maxLines: 1,
+                      textAlign: TextAlign.start,
+                      softWrap: true,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.white70,
                       ),
                     ),
                     const SizedBox(height: 12),
                     Row(
                       children: [
                         EmployeeItemTrait(
-                          icon:Icons.notifications_active,
+                          icon: Icons.notifications_active,
                           label: '${employee.createdAt}min',
-
-                        )
-              
+                        ),
                       ],
                     ),
                   ],

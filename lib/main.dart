@@ -22,6 +22,7 @@ void main() {
       key: UniqueKey(),
       onInitializationComplete: () => runApp(
         const ProviderScope(child: MyApp()),
+
       ),
     ),
   );

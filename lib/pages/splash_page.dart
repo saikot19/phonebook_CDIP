@@ -54,7 +54,7 @@ class _SplashPageState extends State<SplashPage> {
               const Padding(
                 padding: EdgeInsets.only(bottom: 16.0),
                 child: Text(
-                  "V.2.0.1",
+                  "V.4.1.1",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
