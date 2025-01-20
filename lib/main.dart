@@ -1,4 +1,3 @@
-// Packages
 import 'package:flutter/material.dart';
 
 // ignore: depend_on_referenced_packages
@@ -14,15 +13,12 @@ import 'package:phonebook/models/employee.dart';
 import './pages/splash_page.dart';
 import './pages/categories_page.dart';
 
-
-
 void main() {
   runApp(
     SplashPage(
       key: UniqueKey(),
       onInitializationComplete: () => runApp(
         const ProviderScope(child: MyApp()),
-
       ),
     ),
   );
@@ -34,12 +30,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
+      debugShowCheckedModeBanner: false, // Removes the debug banner
       home: const CategoriesPage(),
-
-
     );
   }
 }
+
+
 
 //flutter run -d chrome --web-renderer html
